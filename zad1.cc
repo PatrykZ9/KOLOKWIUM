@@ -13,14 +13,14 @@ int main () {
   // Do zmiennej th_id przypisz numer biezacego watku
   // i ponizsza linia wypisze ten numer
 
-     th_id = ... ;
+     th_id = omp_get_thread_num();
      cout << "Watek nr = " << th_id << endl;
 
      // Niech watek glowny wykona ponizszy kawalek kodu
-     if (th_id == ... ) 
+     if (th_id == 0 ) 
      {
           // Do n_th przypisz liczbe watkow
-          n_th =  ... ;
+          n_th =  omp_get_num_threads();
           cout << "Liczba watkow = " << n_th << endl;
      }
 

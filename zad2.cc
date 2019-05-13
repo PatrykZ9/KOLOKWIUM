@@ -10,7 +10,7 @@ int main () {
 // Uzupelnij ponizszy blok o odpowiednia klauzule firstprivate
 // a takze zabezpiecz w srodku operacje na wielkosci wspoldzielonej
 // Wynik koncowy powinien byc: 400
-
+  #pragma omp parallel firstprivate(c) num_threads(4)
   #pragma omp parallel num_threads(4)
   {
       while (c--) {
